@@ -94,5 +94,6 @@ for frame in validation_frames:
     
     if error > threshold:
         anomalous_frames.append(frame)
+        send_alert()
         play_sound()
-        send_email_notification()
+        send_email_notification(frame)
