@@ -35,7 +35,7 @@ for video_path in video_paths:
 
 # Build the autoencoder
 
-autoencoder = keras.models.Sequential([
+autogait = keras.models.Sequential([
     keras.layers.Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(64, 64, 1)),
     keras.layers.MaxPooling2D((2, 2), padding='same'),
     keras.layers.Conv2D(16, (3, 3), activation='relu', padding='same'),
@@ -54,19 +54,9 @@ autoencoder = keras.models.Sequential([
 
 # Compile and train the autoencoder
 
-autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
+autogait.compile(optimizer='adam', loss='binary_crossentropy')
 normal_frames = np.array(normal_frames)
-autoencoder.fit(normal_frames, normal_frames, epochs=10, batch_size=32)
+autogait.fit(normal_frames, normal_frames, epochs=10, batch_size=32)
 
-
-# Validation and Threshold Selection
-
-
-
-# Anomaly Detection
-
-
-
-# Post-processing and Visualization
-
-# Alerts
+# Save the trained autoencoder model
+autogait.save('path_to_autoencoder_model.h5') # GDrive path
