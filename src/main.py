@@ -16,4 +16,5 @@ autoencoder = train_autoencoder(X_train)
 anomalies = detect_anomalies(test_video_path, autoencoder)
 
 # Display alerts
-# display_and_alert(anomalies)
+display_and_alert(anomalies)
+# display_and_alert(anomalies, 'recipient@example.com')
