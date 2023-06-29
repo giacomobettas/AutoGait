@@ -51,8 +51,8 @@ The main components of the project are:
 
     - Replace videos in the `data/` directory.
     - Adjust the autoencoder architecture, threshold, and other parameters.
-&nbsp;
-&nbsp;
+&nbsp; 
+&nbsp; 
 4. Run the project:
 
     Run `main.py` script to train the autoencoder, detect anomalies, and display/send alerts.
