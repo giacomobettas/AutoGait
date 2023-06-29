@@ -6,21 +6,22 @@ This project performs video anomaly detection using an autoencoder trained with 
 
 The project is structured as follows:
 
-AutoGait/
-├── data/
-│ ├── normal_video.mp4
-│ └── test_video.mp4
-├── src/
-│ ├── autoencoder.py
-│ ├── detector.py
-│ └── alerting.py
-├── test/
-│ ├── anomaly.jpg
-├── utils/
-│ └── email_sender.py
-├── Project_lineup.md
-├── README.md
-└── requirements.txt
+    ```plaintext
+    AutoGait/
+    ├── data/
+    │ ├── normal_video.mp4
+    │ └── test_video.mp4
+    ├── src/
+    │ ├── autoencoder.py
+    │ ├── detector.py
+    │ └── alerting.py
+    ├── test/
+    │ ├── anomaly.jpg
+    ├── utils/
+    │ └── email_sender.py
+    ├── Project_lineup.md
+    ├── README.md
+    └── requirements.txt
 
 
 The main components of the project are:
@@ -43,7 +44,7 @@ The main components of the project are:
 
 2. Install the dependencies:
 
-    '''plaintext
+    ```plaintext
     $ pip install -r requirements.txt
 
 3. Fine tune the project:
@@ -55,7 +56,7 @@ The main components of the project are:
 
     Run 'main.py' script to train the autoencoder, detect anomalies, and display/send alerts.
 
-    '''plaintext
+    ```plaintext
     $ python main.py
 
 
