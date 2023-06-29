@@ -1,4 +1,5 @@
 # AutoGait
+
 Autoencoder for anomalous gait recognition on video input.
 
 ## Project lineup
