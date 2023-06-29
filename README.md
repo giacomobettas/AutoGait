@@ -20,6 +20,7 @@ The project is structured as follows:
     │ └── email_sender.py
     ├── Project_lineup.md
     ├── README.md
+    ├── main.py
     └── requirements.txt
 
 
@@ -48,10 +49,10 @@ The main components of the project are:
 
 3. Fine tune the project:
 
-    - Replace videos in the 'data/' directory.
+    - Replace videos in the `data/` directory.
     - Adjust the autoencoder architecture, threshold, and other parameters.
-
-    
+&nbsp;
+&nbsp;
 4. Run the project:
 
     Run `main.py` script to train the autoencoder, detect anomalies, and display/send alerts.
@@ -59,5 +60,7 @@ The main components of the project are:
     ```plaintext
     $ python main.py
 
+5. Evaluate the results:
 
-
+    - Monitor the console output for any detected anomalies during the execution of the main script.
+    - The script will display anomalous video frames on the screen.
