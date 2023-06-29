@@ -6,7 +6,6 @@ This project performs video anomaly detection using an autoencoder trained with 
 
 The project is structured as follows:
 
-    ```plaintext
     AutoGait/
     ├── data/
     │ ├── normal_video.mp4
@@ -52,9 +51,10 @@ The main components of the project are:
     - Replace videos in the 'data/' directory.
     - Adjust the autoencoder architecture, threshold, and other parameters.
 
+
 4. Run the project:
 
-    Run 'main.py' script to train the autoencoder, detect anomalies, and display/send alerts.
+    Run `main.py` script to train the autoencoder, detect anomalies, and display/send alerts.
 
     ```plaintext
     $ python main.py
