@@ -1,3 +1,4 @@
+from src.video_utils import load_video_frames
 from src.autoencoder import train_autoencoder
 from src.detector import detect_anomalies
 from src.alerting import display_and_alert
