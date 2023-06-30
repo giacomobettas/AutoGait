@@ -2,20 +2,28 @@ from src.video_utils import load_video_frames
 from src.autoencoder import train_autoencoder
 from src.detector import detect_anomalies
 from src.alerting import display_and_alert
+import joblib
 
 
-# Define the video paths
-normal_video_path = 'data/normal_video.mp4'
-test_video_path = 'data/test_video.mp4'
+if __name__ == 'main':
+    # Define the video paths
+    normal_video_path = 'data/normal_video.mp4'
+    test_video_path = 'data/test_video.mp4'
 
-# Train the autoencoder
-# Load the normal video frames for training
-X_train = load_video_frames(normal_video_path)
-autoencoder = train_autoencoder(X_train)
+    # Load the normal video frames for training
+    X_train = load_video_frames(normal_video_path)
+    # Train the autoencoder and save the model
+    autoencoder = train_autoencoder(X_train, 'models/autoencoder_model.pkl')
 
-# Detect anomalies in the test video
-anomalies = detect_anomalies(test_video_path, autoencoder)
+    # Save the trained autoencoder model
+    joblib.dump(autoencoder, 'models/autoencoder_model.pkl')
 
-# Display alerts
-display_and_alert(anomalies)
-# display_and_alert(anomalies, 'recipient@example.com')
+    # Load the saved autoencoder model
+    saved_autoencoder = joblib.load('models/autoencoder_model.pkl')
+
+    # Detect anomalies using the saved autoencoder model
+    anomalies = detect_anomalies(test_video_path, saved_autoencoder)
+
+    # Display alerts
+    display_and_alert(anomalies)
+    # display_and_alert(anomalies, 'recipient@example.com')
