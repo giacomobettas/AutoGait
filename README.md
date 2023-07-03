@@ -2,6 +2,8 @@
 
 This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the scikit-learn library to develop the autoencoder for anomaly detection. The project includes an alerting section that displays the anomalous video frames on the screen and sends an alert via email with attached images of the detected anomalies.
 
+This initial stage consists of developing an autoencoder that can be used to recognize a person by their gait.
+
 ## Project Structure
 
 The project is structured as follows:
