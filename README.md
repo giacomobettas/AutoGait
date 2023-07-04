@@ -30,7 +30,7 @@ The project is structured as follows:
 
 The main components of the project are:
 
-- `data/`: This directory contains the video files used for training the autoencoder and detecting anomalies. The `normal_video.mp4` file is used for training, and the `test_video.mp4` file is used for anomaly detection.
+- `data/`: This directory contains the video files used for training the autoencoder and detecting anomalies. The `input_videos/` directory contains normal videos used for training, while the `test_video.mp4` file is used for anomaly detection.
 - `models/`: This folder contains the autoencoder trained models. They can be loaded into the script to run tests with different models.
 - `src/`: This directory contains the Python scripts that implement the autoencoder, detector, and alerting functionality.
 - `test/`: This directory contains the detector outputs.

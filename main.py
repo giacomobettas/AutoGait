@@ -1,22 +1,17 @@
-from src.video_utils import load_video_frames
+import joblib
+# import sys
 from src.autoencoder import train_autoencoder
 from src.detector import detect_anomalies
 from src.alerting import display_and_alert
-import joblib
 
 
 if __name__ == 'main':
     # Define the video paths
-    normal_video_path = 'data/normal_video.mp4'
+    input_folder_path = 'data/input_videos'
     test_video_path = 'data/test_video.mp4'
 
-    # Load the normal video frames for training
-    X_train = load_video_frames(normal_video_path)
     # Train the autoencoder and save the model
-    autoencoder = train_autoencoder(X_train, 'models/autoencoder_model.pkl')
-
-    # Save the trained autoencoder model
-    joblib.dump(autoencoder, 'models/autoencoder_model.pkl')
+    autoencoder = train_autoencoder(input_folder_path, 'models/autoencoder_model.pkl')
 
     """
     # Choose the autoencoder model to use from command line

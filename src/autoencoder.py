@@ -1,10 +1,14 @@
-from sklearn.neural_network import MLPRegressor
 import joblib
 import numpy as np
+from sklearn.neural_network import MLPRegressor
+from src.video_utils import load_video_frames
 
-
-def train_autoencoder(X_train, save_path):
-    # Preprocess and reshape the input video frames
+def train_autoencoder(input_folder_path, save_path):
+    # Load video frames from the folder
+    frames = load_video_frames(input_folder_path)
+    
+    # Convert frames to numpy array and flatten
+    X_train = np.array(frames)
     X_train = X_train.reshape(X_train.shape[0], -1)
 
     # Create and train the autoencoder model
