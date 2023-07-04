@@ -18,15 +18,6 @@ if __name__ == 'main':
     # Save the trained autoencoder model
     joblib.dump(autoencoder, 'models/autoencoder_model.pkl')
 
-    """
-    # Choose the autoencoder model to use from command line
-    if len(sys.argv) < 2:
-        print("Please provide the path to the saved model file.")
-        sys.exit(1)
-
-    model_path = sys.argv[1]
-    """
-
     # Load the saved autoencoder model
     saved_autoencoder = joblib.load('models/autoencoder_model.pkl')
 
