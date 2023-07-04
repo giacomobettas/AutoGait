@@ -21,7 +21,7 @@ if __name__ == 'main':
     """
     # Choose the autoencoder model to use from command line
     if len(sys.argv) < 2:
-        print("Please provide the path to the saved model file.")
+        print("Provide the path to the saved model file.")
         sys.exit(1)
 
     model_path = sys.argv[1]
