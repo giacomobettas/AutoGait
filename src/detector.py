@@ -2,11 +2,11 @@ import cv2
 import joblib
 import numpy as np
 
-def detect_anomalies(video_path, model_path):
+def detect_anomalies(test_video_path, model_path):
     # Load the trained autoencoder model
     autoencoder = joblib.load(model_path)
 
-    cap = cv2.VideoCapture(video_path)
+    cap = cv2.VideoCapture(test_video_path)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
     anomalies = []
