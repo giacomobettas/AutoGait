@@ -11,8 +11,6 @@ def load_video_frames(input_folder_path):
 
         cap = cv2.VideoCapture(video_path)
 
-        frames.append(frame)
-
         while True:
             ret, frame = cap.read()
             if not ret:
