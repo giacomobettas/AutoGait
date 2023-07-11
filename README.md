@@ -63,7 +63,7 @@ The main components of the project are:
     Run `main.py` script to train the autoencoder, detect anomalies, and display/send alerts.
 
     ```plaintext
-    $ python main.py
+    $ python3 main.py
 
 5. Evaluate the results:
 
