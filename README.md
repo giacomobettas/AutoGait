@@ -2,7 +2,7 @@
 
 This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the scikit-learn library to develop the autoencoder for anomaly detection. The project includes an alerting section that displays the anomalous video frames on the screen, save them in a directory and sends an alert via email with attached images of the detected anomalies.
 
-This initial stage consists of developing an autoencoder that can be used to recognize when a person falls. The ultimate goal is to add the ability to recognize a person by their gait and different dangerous situations in a domestic environment.
+This initial stage consists of developing an autoencoder that can be used to recognize when a person falls. Afterwards, the ability to recognize a person by their gait and distinguish different dangerous situations in a domestic environment will be added. The ultimate goal is to monitor the elderly automatically in their home environment.
 
 ## Project Structure
 
