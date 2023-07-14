@@ -1,8 +1,8 @@
 # AutoGait
 
-This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the scikit-learn library to develop the autoencoder for anomaly detection. The project includes an alerting section that displays the anomalous video frames on the screen and sends an alert via email with attached images of the detected anomalies.
+This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the scikit-learn library to develop the autoencoder for anomaly detection. The project includes an alerting section that displays the anomalous video frames on the screen, save them in a directory and sends an alert via email with attached images of the detected anomalies.
 
-This initial stage consists of developing an autoencoder that can be used to recognize a person by their gait.
+This initial stage consists of developing an autoencoder that can be used to recognize when a person falls. The ultimate goal is to add the ability to recognize a person by their gait and different dangerous situations in a domestic environment.
 
 ## Project Structure
 
@@ -10,20 +10,24 @@ The project is structured as follows:
 
     AutoGait/
     ├── data/
-    │ ├── normal_video.mp4
+    │ └── input_videos
+    │   ├── normal_video1.mp4
+    │   └── normal_video2.mp4
     │ └── test_video.mp4
     ├── models/
       └── autoencoder_model.pkl
     ├── src/
+    │ ├── alerting.py
     │ ├── autoencoder.py
     │ ├── detector.py
-    │ └── alerting.py
+    │ └── video_utils.py
     ├── test/
     │ ├── anomaly.jpg
     ├── utils/
     │ └── email_sender.py
     ├── Project_lineup.md
     ├── README.md
+    ├── autoencoder_train.py
     ├── main.py
     └── requirements.txt
 
@@ -58,14 +62,21 @@ The main components of the project are:
     - Adjust the autoencoder architecture, threshold, and other parameters.
 &nbsp;  
 &nbsp;  
-4. Run the project:
+4. Train the autoencoder:
 
-    Run `main.py` script to train the autoencoder, detect anomalies, and display/send alerts.
+    ```plaintext
+    $ python3 autoencoder_train.py
+
+5. Run the project:
+
+    Run `main.py` script to detect anomalies and display/send alerts.
 
     ```plaintext
     $ python3 main.py
-
-5. Evaluate the results:
+&nbsp;  
+&nbsp;  
+6. Evaluate the results:
 
     - Monitor the console output for any detected anomalies during the execution of the main script.
-    - The script will display anomalous video frames on the screen.
+    - The script will display anomalous video frames on the screen and save them in the `test/` directory.
+    - Fine tune the autoencoder and the detector in order to obtain the expected result.
