@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 # from utils.email_sender import send_email
 
-
-def display_and_alert(anomalies, email_recipient):
+def display_and_alert(anomalies):
     for frame in anomalies:
-        frame = frame.reshape(480, 640).astype(np.uint8)
+        frame = frame.reshape(240, 320).astype(np.uint8) # Reshape the frame to its original dimensions
+        frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR) # Convert to BGR format
 
         # Display the frame
         cv2.imshow('Anomaly Detected', frame)
