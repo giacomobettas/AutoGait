@@ -73,8 +73,7 @@ The main components of the project are:
 
     ```plaintext
     $ python3 main.py
-&nbsp;  
-&nbsp;  
+    
 6. Evaluate the results:
 
     - Monitor the console output for any detected anomalies during the execution of the main script.
