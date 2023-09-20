@@ -16,7 +16,7 @@ def alert(anomalies, output_root_folder):
         first_frame = anomaly[0]
 
         first_frame = first_frame.reshape(240, 320).astype(np.uint8) # Reshape the frame to its original dimensions
-        first_frame = cv2.cvtColor(first_frame, cv2.COLOR_GRAY2BGR) # Convert to BGR format
+        # first_frame = cv2.cvtColor(first_frame, cv2.COLOR_GRAY2BGR) # Convert to BGR format
 
         first_frame_name = 'first_frame.jpg'
         first_frame_path = os.path.join(anomaly_folder, first_frame_name)
@@ -26,7 +26,7 @@ def alert(anomalies, output_root_folder):
         last_frame = anomaly[-1]
 
         last_frame = last_frame.reshape(240, 320).astype(np.uint8) # Reshape the frame to its original dimensions
-        last_frame = cv2.cvtColor(last_frame, cv2.COLOR_GRAY2BGR) # Convert to BGR format
+        # last_frame = cv2.cvtColor(last_frame, cv2.COLOR_GRAY2BGR) # Convert to BGR format
 
         last_frame_name = 'last_frame.jpg'
         last_frame_path = os.path.join(anomaly_folder, last_frame_name)
