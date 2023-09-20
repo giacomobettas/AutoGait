@@ -16,9 +16,8 @@ def load_video_frames(input_folder_path):
             if not ret:
                 break
 
-            # Preprocess and reshape the frame
+            # Preprocess the frame
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            frame = frame.reshape(1, -1)
 
             frames.append(frame)
 

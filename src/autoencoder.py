@@ -7,10 +7,11 @@ def train_autoencoder(input_folder_path, save_path):
     # Load video frames from the folder
     frames = load_video_frames(input_folder_path)
     
-    # Convert frames to numpy array and flatten
+    # Convert frames to numpy array and flatten each frame
     X_train = np.array(frames)
-    X_train = X_train.reshape(X_train.shape[0], -1)
-
+    num_frames, height, width = X_train.shape
+    X_train = X_train.reshape(num_frames, -1)
+    
     # Create and train the autoencoder model
     autoencoder = MLPRegressor(hidden_layer_sizes=(128, 64, 128),
                                activation='relu', random_state=49, max_iter=1000,
