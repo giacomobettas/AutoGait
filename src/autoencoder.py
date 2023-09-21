@@ -16,10 +16,10 @@ def train_autoencoder(input_folder_path, save_path):
     # Encoder
     autoencoder.add(Conv2D(64, (3, 3), activation='relu', padding='same', input_shape=(240, 320, 1)))
     autoencoder.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
-    autoencoder.add(Flatten())
+    # autoencoder.add(Flatten())
 
     # Decoder
-    autoencoder.add(Reshape(X_train.shape[1:]))
+    # autoencoder.add(Reshape(X_train.shape[1:]))
     autoencoder.add(Conv2DTranspose(32, (3, 3), activation='relu', padding='same'))
     autoencoder.add(Conv2DTranspose(64, (3, 3), activation='relu', padding='same'))
     autoencoder.add(Conv2DTranspose(1, (3, 3), activation='sigmoid', padding='same'))
