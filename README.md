@@ -1,6 +1,6 @@
 # AutoGait
 
-This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the scikit-learn library to develop the autoencoder for anomaly detection. The project includes an alerting section that displays the anomalous video frames on the screen, save them in a directory and sends an alert via email with attached images of the detected anomalies.
+This project performs video anomaly detection using an autoencoder trained with a video containing normal frames. It utilizes the Keras library to develop the CNN-based autoencoder for anomaly detection. The project includes an alerting section that saves the anomalous video frames in a directory and sends an alert via email with attached images of the detected anomalies.
 
 This initial stage consists of developing an autoencoder that can be used to recognize when a person falls. Afterwards, the ability to recognize a person by their gait and distinguish different dangerous situations in a domestic environment will be added. The ultimate goal is to monitor the elderly automatically in their home environment.
 
@@ -15,14 +15,22 @@ The project is structured as follows:
     │   └── normal_video2.mp4
     │ └── test_video.mp4
     ├── models/
-      └── autoencoder_model.pkl
+      └── autoencoder_model.h5
     ├── src/
     │ ├── alerting.py
     │ ├── autoencoder.py
     │ ├── detector.py
     │ └── video_utils.py
     ├── test/
-    │ ├── anomaly.jpg
+    │ ├── anomaly_1
+    │   ├── first_frame.jpg
+    │   └── last_frame.jpg
+    │ ├── anomaly_2
+    │   ├── first_frame.jpg
+    │   └── last_frame.jpg
+    │ ├── anomaly_3
+    │   ├── first_frame.jpg
+    │   └── last_frame.jpg
     ├── utils/
     │ └── email_sender.py
     ├── Project_lineup.md
@@ -37,7 +45,7 @@ The main components of the project are:
 - `data/`: This directory contains the video files used for training the autoencoder and detecting anomalies. The `input_videos/` directory contains normal videos used for training, while the `test_video.mp4` file is used for anomaly detection.
 - `models/`: This folder contains the autoencoder trained models. They can be loaded into the script to run tests with different models.
 - `src/`: This directory contains the Python scripts that implement the autoencoder, detector, and alerting functionality.
-- `test/`: This directory contains the detector outputs.
+- `test/`: This directory contains the detector outputs. There will be a folder for any anomaly detected containing the first and the last frame of the respective anomaly.
 - `utils/`: This directory contains a utility script for sending email alerts with attachments (work in progress).
 - `Project_lineup.md`: This file explains how to organize and implement the anomaly detection project applied to the gait.
 - `README.md`: This file provides an overview of the project, instructions for setting up and running the project, and other relevant information.
