@@ -14,7 +14,7 @@ def train_autoencoder(input_folder_path, save_path):
     autoencoder = Sequential()
 
     # Encoder
-    autoencoder.add(Conv2D(64, (3, 3), activation='relu', padding='same', input_shape=X_train.shape[1:]))
+    autoencoder.add(Conv2D(64, (3, 3), activation='relu', padding='same', input_shape=(240, 320, 1)))
     autoencoder.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
     autoencoder.add(Flatten())
 
