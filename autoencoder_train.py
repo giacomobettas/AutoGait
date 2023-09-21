@@ -1,4 +1,3 @@
-import os
 from src.autoencoder import train_autoencoder
 from tensorflow.keras.models import load_model
 
