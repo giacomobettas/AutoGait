@@ -15,5 +15,5 @@ anomalies = detect_anomalies(test_video_path, saved_autoencoder)
 print(f'Anomalies detected: {len(anomalies)}')
 
 # Display alerts
-output_root_folder = 'test'  # Specify your desired output folder
+output_root_folder = 'test'  # Specify the output folder
 alert(anomalies, output_root_folder)
