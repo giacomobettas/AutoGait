@@ -15,7 +15,7 @@ def alert(anomalies, output_root_folder):
         # Save the first frame of the anomaly
         first_frame = anomaly[0]
 
-        first_frame = first_frame.reshape(first_frame.shape[1], first_frame.shape[2]).astype(np.uint8)  # Reshape the frame to its original dimensions
+        first_frame = first_frame.astype(np.uint8)  # Ensure it's of uint8 type (grayscale)
         first_frame_name = 'first_frame.jpg'
         first_frame_path = os.path.join(anomaly_folder, first_frame_name)
         cv2.imwrite(first_frame_path, first_frame)
@@ -23,7 +23,7 @@ def alert(anomalies, output_root_folder):
         # Save the last frame of the anomaly
         last_frame = anomaly[-1]
 
-        last_frame = last_frame.reshape(last_frame.shape[1], last_frame.shape[2]).astype(np.uint8)  # Reshape the frame to its original dimensions
+        last_frame = last_frame.astype(np.uint8)  # Ensure it's of uint8 type (grayscale)
         last_frame_name = 'last_frame.jpg'
         last_frame_path = os.path.join(anomaly_folder, last_frame_name)
         cv2.imwrite(last_frame_path, last_frame)
